@@ -17,6 +17,12 @@ describe formatted department_data;
 # For data load from local
 load data local inpath 'file:///tmp/hive_class/depart_data.csv' into table department_data; 
 
+# To show the data into table which load into the table
+Select * from department_data;
+
+# To show Mapper and Reducer part while executing the Hive engine 
+Select count(*) from department_data;
+
 # Display column name
 set hive.cli.print.header = true;
 
