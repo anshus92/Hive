@@ -23,7 +23,7 @@ Select * from department_data;
 # To show Mapper and Reducer part while executing the Hive engine 
 Select count(*) from department_data;
 
-# Display column name
+# Command to display column name
 set hive.cli.print.header = true;
 
 # Load data from hdfs location
