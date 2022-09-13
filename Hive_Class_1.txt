@@ -26,6 +26,23 @@ Select count(*) from department_data;
 # Command to display column name
 set hive.cli.print.header = true;
 
+#Create table to store the data from HDFS
+
+create table department_data_from_hdfs                                                                                                            
+    > (                                                                                                                                       
+    > dept_id int,                                                                                                                            
+    > dept_name string,                                                                                                                       
+    > manager_id int,                                                                                                                         
+    > salary int)                                                                                                                             
+    > row format delimited                                                                                                                    
+    > fields terminated by ','; 
+    
+#Command to show the table details 
+describe  department_data_from_hdfs;
+
+#Command to show all the detais along with this table 
+describe formatted  department_data_from_hdfs;
+
 # Load data from hdfs location
 load data inpath '/tmp/hive_data_class_2/' into table department_data_from_hdfs;
 
